@@ -48,7 +48,8 @@ We want to see the progress evolution
 * Screen rotation should be allowed 
 * Language must be Swift
 * Compatible with the 2 latest major versions of iOS
-* 3rd party libraries are forbidden.
+* Architecture must be MVVM + RxSwift 
+* 3rd party libraries are forbidden. (except RxSwift and SnapKit)
 
 ## Assessment:
 Once submitted, your solution will be checked on the requirements/restrictions mentioned above as well as:
@@ -56,7 +57,7 @@ Once submitted, your solution will be checked on the requirements/restrictions m
 - Documentation
 - Coding/Problem solving skills
 - Code Efficiency, Maintainability, Scalability
-- Architecture and Design Patterns
+- Design Patterns
 - Version Control
 - Testing
 - Platform Knowledge
