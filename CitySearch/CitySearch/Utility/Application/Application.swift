@@ -7,8 +7,11 @@ final class Application {
     func configureMainInterface(in window: UIWindow) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let searchCityNavigationController = UINavigationController()
+        let citySearchNavigationController = UINavigationController()
         
+        let citySearchNavigator = DefaultCitySearchNavigator(storyBoard: storyboard, navigationController: citySearchNavigationController)
+        window.rootViewController = citySearchNavigationController
+        citySearchNavigator.toCitySearch()
     }
     
 }
