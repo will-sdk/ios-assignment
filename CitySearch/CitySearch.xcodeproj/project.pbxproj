@@ -19,6 +19,7 @@
 		3FE800D929AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800D829AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift */; };
 		3FE800E829ACAA6B00598BC5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800E729ACAA6B00598BC5 /* Application.swift */; };
 		3FE800EC29ACAB7A00598BC5 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */; };
+		3FE800EE29ACABF500598BC5 /* DefaultCitySearchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */; };
 		61D7BB76C3E244A30AC2803D /* Pods_CitySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499C5835FC1E46010C7478E4 /* Pods_CitySearch.framework */; };
 		AB103328610D67CB225C0F9F /* Pods_CitySearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223AB47FB113B1EF714149FC /* Pods_CitySearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		3FE800D829AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FE800E729ACAA6B00598BC5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCitySearchNavigator.swift; sourceTree = "<group>"; };
 		499C5835FC1E46010C7478E4 /* Pods_CitySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9A0FC04198F8D2509CC26E /* Pods-CitySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitySearch.debug.xcconfig"; path = "Target Support Files/Pods-CitySearch/Pods-CitySearch.debug.xcconfig"; sourceTree = "<group>"; };
 		AC1480FEADE0981EB6E65313 /* Pods-CitySearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitySearchTests.release.xcconfig"; path = "Target Support Files/Pods-CitySearchTests/Pods-CitySearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */,
+				3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */,
 			);
 			path = CitySearch;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			files = (
 				3FE800E829ACAA6B00598BC5 /* Application.swift in Sources */,
 				3FE800BA29AC7FE100598BC5 /* ViewController.swift in Sources */,
+				3FE800EE29ACABF500598BC5 /* DefaultCitySearchNavigator.swift in Sources */,
 				3FE800EC29ACAB7A00598BC5 /* CitySearchViewController.swift in Sources */,
 				3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */,
 				3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */,
