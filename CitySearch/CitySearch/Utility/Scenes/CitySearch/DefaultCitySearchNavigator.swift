@@ -11,6 +11,7 @@ class DefaultCitySearchNavigator {
     }
     
     func toCitySearch() {
-        
+        let vc = storyBoard.instantiateViewController(ofType: CitySearchViewController.self)
+        navigationController.pushViewController(vc, animated: true)
     }
 }
