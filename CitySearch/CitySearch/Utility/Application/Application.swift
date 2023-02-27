@@ -8,9 +8,11 @@ final class Application {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let citySearchNavigationController = UINavigationController()
-        
         let citySearchNavigator = DefaultCitySearchNavigator(storyBoard: storyboard, navigationController: citySearchNavigationController)
+        
         window.rootViewController = citySearchNavigationController
+        window.makeKeyAndVisible()
+        
         citySearchNavigator.toCitySearch()
     }
     
