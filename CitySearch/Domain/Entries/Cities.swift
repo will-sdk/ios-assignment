@@ -1,8 +1,15 @@
-//
-//  Cities.swift
-//  Domain
-//
-//  Created by Willy on 28/02/2023.
-//
 
 import Foundation
+
+public struct Cities: Decodable {
+    public let country: String
+    public let name: String
+    public let id: Int
+    public let coord: Location
+    
+}
+
+public struct Location: Decodable {
+    public let lon: Double
+    public let lat: Double
+}
