@@ -17,6 +17,9 @@
 		3FDE2F1329AE109800B2DA0B /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDE2F1629AE109800B2DA0B /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */; };
 		3FDE2F1729AE109800B2DA0B /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FDE2F1D29AE10E700B2DA0B /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F1C29AE10E700B2DA0B /* UseCaseProvider.swift */; };
+		3FDE2F1F29AE110F00B2DA0B /* ListOfCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F1E29AE110F00B2DA0B /* ListOfCitiesUseCase.swift */; };
+		3FDE2F2229AE114900B2DA0B /* ListOfCitiesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */; };
 		3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B529AC7FE100598BC5 /* AppDelegate.swift */; };
 		3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */; };
 		3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BB29AC7FE100598BC5 /* Main.storyboard */; };
@@ -91,6 +94,9 @@
 		3FDE2F0929AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCase.swift; sourceTree = "<group>"; };
 		3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
+		3FDE2F1C29AE10E700B2DA0B /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		3FDE2F1E29AE110F00B2DA0B /* ListOfCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCase.swift; sourceTree = "<group>"; };
+		3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesNetwork.swift; sourceTree = "<group>"; };
 		3FE800B229AC7FE100598BC5 /* CitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE800B529AC7FE100598BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,9 +205,28 @@
 		3FDE2F1129AE109800B2DA0B /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE2F1B29AE10D800B2DA0B /* UseCases */,
+				3FDE2F2029AE113400B2DA0B /* Service */,
 				3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */,
 			);
 			path = NetworkPlatform;
+			sourceTree = "<group>";
+		};
+		3FDE2F1B29AE10D800B2DA0B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE2F1C29AE10E700B2DA0B /* UseCaseProvider.swift */,
+				3FDE2F1E29AE110F00B2DA0B /* ListOfCitiesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3FDE2F2029AE113400B2DA0B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3FE800A929AC7FE100598BC5 = {
@@ -454,6 +479,7 @@
 					};
 					3FDE2F0F29AE109700B2DA0B = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					3FE800B129AC7FE100598BC5 = {
 						CreatedOnToolsVersion = 14.2;
@@ -650,6 +676,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDE2F1D29AE10E700B2DA0B /* UseCaseProvider.swift in Sources */,
+				3FDE2F1F29AE110F00B2DA0B /* ListOfCitiesUseCase.swift in Sources */,
+				3FDE2F2229AE114900B2DA0B /* ListOfCitiesNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +825,7 @@
 		3FDE2F1829AE109800B2DA0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -815,6 +845,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -825,6 +856,7 @@
 		3FDE2F1929AE109800B2DA0B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
