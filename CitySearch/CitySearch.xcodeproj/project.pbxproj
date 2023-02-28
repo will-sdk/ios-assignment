@@ -23,6 +23,9 @@
 		3FDE2F2229AE114900B2DA0B /* ListOfCitiesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */; };
 		3FDE2F2529AE119E00B2DA0B /* NetworkFromJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2429AE119E00B2DA0B /* NetworkFromJsonFile.swift */; };
 		3FDE2F2729AE11D300B2DA0B /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2629AE11D300B2DA0B /* NetworkProvider.swift */; };
+		3FDE2F2929AE156300B2DA0B /* CitySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2829AE156300B2DA0B /* CitySearchViewModel.swift */; };
+		3FDE2F2B29AE15A300B2DA0B /* CitySearchItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2A29AE15A300B2DA0B /* CitySearchItemViewModel.swift */; };
+		3FDE2F2D29AE166500B2DA0B /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2C29AE166500B2DA0B /* Observable+Ext.swift */; };
 		3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B529AC7FE100598BC5 /* AppDelegate.swift */; };
 		3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */; };
 		3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BB29AC7FE100598BC5 /* Main.storyboard */; };
@@ -102,6 +105,9 @@
 		3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesNetwork.swift; sourceTree = "<group>"; };
 		3FDE2F2429AE119E00B2DA0B /* NetworkFromJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFromJsonFile.swift; sourceTree = "<group>"; };
 		3FDE2F2629AE11D300B2DA0B /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		3FDE2F2829AE156300B2DA0B /* CitySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewModel.swift; sourceTree = "<group>"; };
+		3FDE2F2A29AE15A300B2DA0B /* CitySearchItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchItemViewModel.swift; sourceTree = "<group>"; };
+		3FDE2F2C29AE166500B2DA0B /* Observable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		3FE800B229AC7FE100598BC5 /* CitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE800B529AC7FE100598BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +317,7 @@
 			children = (
 				3FE800EF29ACACE800598BC5 /* Reusable.swift */,
 				3FE800E629ACAA4F00598BC5 /* Application */,
+				3FDE2F2C29AE166500B2DA0B /* Observable+Ext.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -336,6 +343,8 @@
 			children = (
 				3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */,
 				3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */,
+				3FDE2F2829AE156300B2DA0B /* CitySearchViewModel.swift */,
+				3FDE2F2A29AE15A300B2DA0B /* CitySearchItemViewModel.swift */,
 			);
 			path = CitySearch;
 			sourceTree = "<group>";
@@ -735,7 +744,10 @@
 			files = (
 				3FE800E829ACAA6B00598BC5 /* Application.swift in Sources */,
 				3FE800EE29ACABF500598BC5 /* DefaultCitySearchNavigator.swift in Sources */,
+				3FDE2F2B29AE15A300B2DA0B /* CitySearchItemViewModel.swift in Sources */,
 				3FE800EC29ACAB7A00598BC5 /* CitySearchViewController.swift in Sources */,
+				3FDE2F2D29AE166500B2DA0B /* Observable+Ext.swift in Sources */,
+				3FDE2F2929AE156300B2DA0B /* CitySearchViewModel.swift in Sources */,
 				3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */,
 				3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */,
 				3FE800F029ACACE800598BC5 /* Reusable.swift in Sources */,
@@ -883,6 +895,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -915,6 +928,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
