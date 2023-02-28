@@ -12,7 +12,7 @@ final class CitySearchViewModel {
     }
     struct Output {
         let cities: Driver<[CitySearchItemViewModel]>
-        let selectedPost: Driver<Cities>
+        let selectedCity: Driver<Cities>
     }
     
     private let navigator: CitySearchNavigator
@@ -30,13 +30,13 @@ final class CitySearchViewModel {
                 .map { $0.map { CitySearchItemViewModel(with: $0) } }
         }
         
-        let selectedPost = input.selection
+        let selectedCity = input.selection
             .withLatestFrom(cities) { (index, cities) -> Cities in
                 return cities[index.row].cities
             }
             .do(onNext: navigator.toMapView)
         
         return Output(cities: cities,
-                    selectedPost: selectedPost)
+                      selectedCity: selectedCity)
         }
 }

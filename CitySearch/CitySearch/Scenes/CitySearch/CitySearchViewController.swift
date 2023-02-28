@@ -49,7 +49,7 @@ class CitySearchViewController: UIViewController {
             cell.bind(viewModel)
         }.disposed(by: disposBag)
         
-        output.selectedPost
+        output.selectedCity
             .drive()
             .disposed(by: disposBag)
     }
