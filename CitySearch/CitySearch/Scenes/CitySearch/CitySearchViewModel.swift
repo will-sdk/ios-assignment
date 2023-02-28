@@ -11,7 +11,7 @@ final class CitySearchViewModel {
         let selection: Driver<IndexPath>
     }
     struct Output {
-        let fixtures: Driver<[CitySearchItemViewModel]>
+        let cities: Driver<[CitySearchItemViewModel]>
         let selectedPost: Driver<Cities>
     }
     
@@ -36,7 +36,7 @@ final class CitySearchViewModel {
             }
             .do(onNext: navigator.toMapView)
         
-        return Output(fixtures: cities,
+        return Output(cities: cities,
                     selectedPost: selectedPost)
         }
 }

@@ -24,6 +24,9 @@ class DefaultCitySearchNavigator: CitySearchNavigator {
     }
     
     func toMapView(_ cities: Cities) {
-        
+        print("city name \(cities.name)")
+        print("city country \(cities.country)")
+        print("city lat \(cities.coord.lat)")
+        print("city lon \(cities.coord.lon)")
     }
 }
