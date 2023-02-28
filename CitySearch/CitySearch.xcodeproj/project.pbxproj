@@ -20,6 +20,7 @@
 		3FDE2F1D29AE10E700B2DA0B /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F1C29AE10E700B2DA0B /* UseCaseProvider.swift */; };
 		3FDE2F1F29AE110F00B2DA0B /* ListOfCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F1E29AE110F00B2DA0B /* ListOfCitiesUseCase.swift */; };
 		3FDE2F2229AE114900B2DA0B /* ListOfCitiesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */; };
+		3FDE2F2529AE119E00B2DA0B /* NetworkFromJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F2429AE119E00B2DA0B /* NetworkFromJsonFile.swift */; };
 		3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B529AC7FE100598BC5 /* AppDelegate.swift */; };
 		3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */; };
 		3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BB29AC7FE100598BC5 /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		3FDE2F1C29AE10E700B2DA0B /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		3FDE2F1E29AE110F00B2DA0B /* ListOfCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCase.swift; sourceTree = "<group>"; };
 		3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesNetwork.swift; sourceTree = "<group>"; };
+		3FDE2F2429AE119E00B2DA0B /* NetworkFromJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFromJsonFile.swift; sourceTree = "<group>"; };
 		3FE800B229AC7FE100598BC5 /* CitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE800B529AC7FE100598BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				3FDE2F1B29AE10D800B2DA0B /* UseCases */,
 				3FDE2F2029AE113400B2DA0B /* Service */,
+				3FDE2F2329AE118800B2DA0B /* Network */,
 				3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */,
 			);
 			path = NetworkPlatform;
@@ -227,6 +230,14 @@
 				3FDE2F2129AE114900B2DA0B /* ListOfCitiesNetwork.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3FDE2F2329AE118800B2DA0B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE2F2429AE119E00B2DA0B /* NetworkFromJsonFile.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3FE800A929AC7FE100598BC5 = {
@@ -676,6 +687,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDE2F2529AE119E00B2DA0B /* NetworkFromJsonFile.swift in Sources */,
 				3FDE2F1D29AE10E700B2DA0B /* UseCaseProvider.swift in Sources */,
 				3FDE2F1F29AE110F00B2DA0B /* ListOfCitiesUseCase.swift in Sources */,
 				3FDE2F2229AE114900B2DA0B /* ListOfCitiesNetwork.swift in Sources */,
