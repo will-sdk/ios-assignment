@@ -49,7 +49,7 @@ class CitySearchTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind(_ viewModel:CitySearchItemViewModel) {
+    func bind(_ viewModel: CitySearchItemViewModel) {
         titleLabel.text = "\(viewModel.name), \(viewModel.country)"
         subtitleLabel.text = "lat : \(viewModel.lat), long : \(viewModel.long)"
     }
