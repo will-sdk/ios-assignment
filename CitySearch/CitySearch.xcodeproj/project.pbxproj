@@ -14,6 +14,9 @@
 		3FDE2F0429AE0B9100B2DA0B /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0329AE0B9100B2DA0B /* Cities.swift */; };
 		3FDE2F0829AE0D0200B2DA0B /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0729AE0D0200B2DA0B /* UseCaseProvider.swift */; };
 		3FDE2F0A29AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0929AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift */; };
+		3FDE2F1329AE109800B2DA0B /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FDE2F1629AE109800B2DA0B /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */; };
+		3FDE2F1729AE109800B2DA0B /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FE800B629AC7FE100598BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B529AC7FE100598BC5 /* AppDelegate.swift */; };
 		3FE800B829AC7FE100598BC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */; };
 		3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BB29AC7FE100598BC5 /* Main.storyboard */; };
@@ -39,6 +42,13 @@
 			remoteGlobalIDString = 3FDE2EF229AE0A9100B2DA0B;
 			remoteInfo = Domain;
 		};
+		3FDE2F1429AE109800B2DA0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE800AA29AC7FE100598BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FDE2F0F29AE109700B2DA0B;
+			remoteInfo = NetworkPlatform;
+		};
 		3FE800C929AC7FE300598BC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FE800AA29AC7FE100598BC5 /* Project object */;
@@ -62,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3FDE2F1729AE109800B2DA0B /* NetworkPlatform.framework in Embed Frameworks */,
 				3FDE2EFA29AE0A9100B2DA0B /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -78,6 +89,8 @@
 		3FDE2F0329AE0B9100B2DA0B /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		3FDE2F0729AE0D0200B2DA0B /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		3FDE2F0929AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCase.swift; sourceTree = "<group>"; };
+		3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		3FE800B229AC7FE100598BC5 /* CitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE800B529AC7FE100598BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FE800B729AC7FE100598BC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,11 +125,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FDE2F0D29AE109700B2DA0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE800AF29AC7FE100598BC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3FDE2EF929AE0A9100B2DA0B /* Domain.framework in Frameworks */,
+				3FDE2F1629AE109800B2DA0B /* NetworkPlatform.framework in Frameworks */,
 				61D7BB76C3E244A30AC2803D /* Pods_CitySearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +196,14 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		3FDE2F1129AE109800B2DA0B /* NetworkPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE2F1229AE109800B2DA0B /* NetworkPlatform.h */,
+			);
+			path = NetworkPlatform;
+			sourceTree = "<group>";
+		};
 		3FE800A929AC7FE100598BC5 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +211,7 @@
 				3FE800CB29AC7FE300598BC5 /* CitySearchTests */,
 				3FE800D529AC7FE300598BC5 /* CitySearchUITests */,
 				3FDE2EF429AE0A9100B2DA0B /* Domain */,
+				3FDE2F1129AE109800B2DA0B /* NetworkPlatform */,
 				3FE800B329AC7FE100598BC5 /* Products */,
 				F611F009D9AA8670D15D1D9B /* Pods */,
 				6B04C1E58D85A20A3829570B /* Frameworks */,
@@ -195,6 +225,7 @@
 				3FE800C829AC7FE300598BC5 /* CitySearchTests.xctest */,
 				3FE800D229AC7FE300598BC5 /* CitySearchUITests.xctest */,
 				3FDE2EF329AE0A9100B2DA0B /* Domain.framework */,
+				3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +330,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FDE2F0B29AE109700B2DA0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FDE2F1329AE109800B2DA0B /* NetworkPlatform.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +360,24 @@
 			productReference = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		3FDE2F0F29AE109700B2DA0B /* NetworkPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FDE2F1A29AE109800B2DA0B /* Build configuration list for PBXNativeTarget "NetworkPlatform" */;
+			buildPhases = (
+				3FDE2F0B29AE109700B2DA0B /* Headers */,
+				3FDE2F0C29AE109700B2DA0B /* Sources */,
+				3FDE2F0D29AE109700B2DA0B /* Frameworks */,
+				3FDE2F0E29AE109700B2DA0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkPlatform;
+			productName = NetworkPlatform;
+			productReference = 3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3FE800B129AC7FE100598BC5 /* CitySearch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE800DC29AC7FE300598BC5 /* Build configuration list for PBXNativeTarget "CitySearch" */;
@@ -336,6 +393,7 @@
 			);
 			dependencies = (
 				3FDE2EF829AE0A9100B2DA0B /* PBXTargetDependency */,
+				3FDE2F1529AE109800B2DA0B /* PBXTargetDependency */,
 			);
 			name = CitySearch;
 			productName = CitySearch;
@@ -394,6 +452,9 @@
 						CreatedOnToolsVersion = 14.2;
 						LastSwiftMigration = 1420;
 					};
+					3FDE2F0F29AE109700B2DA0B = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					3FE800B129AC7FE100598BC5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -424,12 +485,20 @@
 				3FE800C729AC7FE300598BC5 /* CitySearchTests */,
 				3FE800D129AC7FE300598BC5 /* CitySearchUITests */,
 				3FDE2EF229AE0A9100B2DA0B /* Domain */,
+				3FDE2F0F29AE109700B2DA0B /* NetworkPlatform */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3FDE2EF129AE0A9100B2DA0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FDE2F0E29AE109700B2DA0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -577,6 +646,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FDE2F0C29AE109700B2DA0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE800AE29AC7FE100598BC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -614,6 +690,11 @@
 			isa = PBXTargetDependency;
 			target = 3FDE2EF229AE0A9100B2DA0B /* Domain */;
 			targetProxy = 3FDE2EF729AE0A9100B2DA0B /* PBXContainerItemProxy */;
+		};
+		3FDE2F1529AE109800B2DA0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FDE2F0F29AE109700B2DA0B /* NetworkPlatform */;
+			targetProxy = 3FDE2F1429AE109800B2DA0B /* PBXContainerItemProxy */;
 		};
 		3FE800CA29AC7FE300598BC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -702,6 +783,64 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.willbkk.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FDE2F1829AE109800B2DA0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbkk.NetworkPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FDE2F1929AE109800B2DA0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbkk.NetworkPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -966,6 +1105,15 @@
 			buildConfigurations = (
 				3FDE2EFC29AE0A9100B2DA0B /* Debug */,
 				3FDE2EFD29AE0A9100B2DA0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FDE2F1A29AE109800B2DA0B /* Build configuration list for PBXNativeTarget "NetworkPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FDE2F1829AE109800B2DA0B /* Debug */,
+				3FDE2F1929AE109800B2DA0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
