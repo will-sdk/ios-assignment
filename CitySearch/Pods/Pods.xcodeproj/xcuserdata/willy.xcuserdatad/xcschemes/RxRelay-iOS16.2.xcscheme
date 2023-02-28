@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6"
-               BuildableName = "RxCocoa.framework"
-               BlueprintName = "RxCocoa"
+               BlueprintIdentifier = "55C9C00A739046DEBDAC0C888848F6E5"
+               BuildableName = "RxRelay.framework"
+               BlueprintName = "RxRelay-iOS16.2"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

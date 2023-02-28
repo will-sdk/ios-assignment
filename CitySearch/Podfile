@@ -34,3 +34,9 @@ target 'Domain' do
   use_frameworks!
   rx_swift
 end
+
+target 'NetworkPlatform' do
+    use_frameworks!
+    rx_swift
+    rx_cocoa
+end

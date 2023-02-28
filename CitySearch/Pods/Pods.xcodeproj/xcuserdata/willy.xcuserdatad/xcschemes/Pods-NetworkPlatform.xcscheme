@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4622BFEF3DC16E8BD15EEFC30D4D0084"
-               BuildableName = "RxRelay.framework"
-               BlueprintName = "RxRelay"
+               BlueprintIdentifier = "DD380CAC5A2D8ACDDF16F6AFFEE5CA0F"
+               BuildableName = "Pods_NetworkPlatform.framework"
+               BlueprintName = "Pods-NetworkPlatform"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
