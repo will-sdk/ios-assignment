@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CitySearch_CitySearchUITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CitySearch_CitySearchUITestsVersionString[];
+FOUNDATION_EXPORT double Pods_DomainVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_DomainVersionString[];
 

@@ -1,23 +1,36 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '14.0'
 
-target 'CitySearch' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+def rx_swift
+  pod 'RxSwift', '~> 6.5.0'
+end
 
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'SnapKit'
+def rx_cocoa
+  pod 'RxCocoa', '~> 6.5.0'
+end
+
+def snap_kit
+  pod 'SnapKit'
+end
+
+def test_pods
+  rx_cocoa
+  rx_swift
+end
+
+target 'CitySearch' do
+  use_frameworks!
+  rx_cocoa
+  rx_swift
+  snap_kit
 
   target 'CitySearchTests' do
     inherit! :search_paths
-    
-    pod 'RxSwift'
-    pod 'RxCocoa'
+    test_pods
   end
+end
 
-  target 'CitySearchUITests' do
-    # Pods for testing
-  end
-
+target 'Domain' do
+  use_frameworks!
+  rx_swift
 end
