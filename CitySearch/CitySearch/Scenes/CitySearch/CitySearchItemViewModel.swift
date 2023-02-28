@@ -2,7 +2,7 @@
 import Domain
 
 final class CitySearchItemViewModel {
-    let name:String
+    let cityName: String
     let country : String
     let lat : Double
     let long : Double
@@ -10,7 +10,7 @@ final class CitySearchItemViewModel {
     let cities: Cities
     init (with cities:Cities) {
         self.cities = cities
-        self.name = cities.name
+        self.cityName = cities.name
         self.country = cities.country
         self.lat = cities.coord.lat
         self.long = cities.coord.lon
