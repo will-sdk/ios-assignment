@@ -4,7 +4,6 @@ import Foundation
 public struct Cities: Decodable {
     public let country: String
     public let name: String
-    public let id: Int
     public let coord: Location
     
 }

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5BBD9FD5EBAACFCDE058B3C36F7AFEF5"
-               BuildableName = "Pods_CitySearch_CitySearchUITests.framework"
-               BlueprintName = "Pods-CitySearch-CitySearchUITests"
+               BlueprintIdentifier = "122829CF32C7E6FA32D4BAD6C31ADD77"
+               BuildableName = "Pods_Domain.framework"
+               BlueprintName = "Pods-Domain"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

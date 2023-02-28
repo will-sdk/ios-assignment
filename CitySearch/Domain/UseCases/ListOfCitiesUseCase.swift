@@ -1,6 +1,6 @@
 
-import Foundation
+import RxSwift
 
 public protocol ListOfCitiesUseCase {
-    func listOfCities()
+    func listOfCities()  -> Observable<[Cities]>
 }
