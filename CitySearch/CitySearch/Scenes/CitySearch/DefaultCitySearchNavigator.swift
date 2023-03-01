@@ -24,9 +24,10 @@ class DefaultCitySearchNavigator: CitySearchNavigator {
     }
     
     func toMapView(_ cities: Cities) {
-        debugPrint("city name \(cities.name)")
-        debugPrint("city country \(cities.country)")
-        debugPrint("city lat \(cities.coord.lat)")
-        debugPrint("city lon \(cities.coord.lon)")
+        let navigator = DefaultMapNavigator(navigationController: navigationController)
+        let viewModel = MapViewModel(cities: cities, navigator: navigator)
+        let vc = storyBoard.instantiateViewController(ofType: MapViewController.self)
+        vc.viewModel = viewModel
+        navigationController.pushViewController(vc, animated: true)
     }
 }
