@@ -8,15 +8,19 @@ import RxSwift
 
 struct MapViewConstants {
     static let coordinate: Double = 1000
+    static let titleLabelSize: CGFloat = 17
+    static let subtitleLabelSize: CGFloat = 13
+    static let navBarHeight = 44
 }
 
 class MapViewController: UIViewController {
-
+    
     var viewModel: MapViewModel!
     
     let disposBag = DisposeBag()
     let mapView = MKMapView()
-
+    var subtitleLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -24,10 +28,39 @@ class MapViewController: UIViewController {
     }
     
     private func setupViews() {
+        // Add navigation bar
+        let navBar = UINavigationBar()
+        navBar.barTintColor = .white
+        navBar.isTranslucent = false
+        view.addSubview(navBar)
+        navBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(MapViewConstants.navBarHeight)
+        }
+        
+        // Add navigation bar title and subtitle
+        let navItem = UINavigationItem(title: "")
+        navBar.setItems([navItem], animated: false)
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: MapViewConstants.titleLabelSize)
+        navItem.titleView = titleLabel
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.font = UIFont.systemFont(ofSize: MapViewConstants.subtitleLabelSize)
+        subtitleLabel.textColor = .gray
+        subtitleLabel.text = ""
+        navItem.titleView?.addSubview(subtitleLabel)
+        subtitleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
         // Add map view to the view
         view.addSubview(mapView)
         mapView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(navBar.snp.bottom)
+            make.left.right.bottom.equalToSuperview()
         }
     }
     
@@ -46,6 +79,8 @@ class MapViewController: UIViewController {
     var cityBinding: Binder<Cities> {
         return Binder(self, binding: { (_ , city) in
             self.setupMapViewBy(lat: city.coord.lat, long: city.coord.lon)
+            self.navigationItem.title = "\(city.name), \(city.country)"
+            self.subtitleLabel.text = "lat: \(city.coord.lat), long: \(city.coord.lon)"
         })
     }
     
