@@ -50,7 +50,7 @@ class CitySearchTableViewCell: UITableViewCell {
     }
     
     func bind(_ viewModel: CitySearchItemViewModel) {
-        titleLabel.text = "\(viewModel.cityName), \(viewModel.country)"
+        titleLabel.text = viewModel.fullNameOfCityAndCountry
         subtitleLabel.text = "lat : \(viewModel.lat), long : \(viewModel.long)"
     }
 
