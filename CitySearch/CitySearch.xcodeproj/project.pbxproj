@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D3E300A23A8CFFF3F8E417C /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF575FF03900C74A90DCCC62 /* Pods_NetworkPlatform.framework */; };
-		3F91F8B629B090E600DE2EE1 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F91F8B529B090E600DE2EE1 /* cities.json */; };
+		3F91F8B729B0914800DE2EE1 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F91F8B529B090E600DE2EE1 /* cities.json */; };
 		3FDE2EF629AE0A9100B2DA0B /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDE2EF529AE0A9100B2DA0B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDE2EF929AE0A9100B2DA0B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; };
 		3FDE2EFA29AE0A9100B2DA0B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -573,7 +573,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F91F8B629B090E600DE2EE1 /* cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +587,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F91F8B729B0914800DE2EE1 /* cities.json in Resources */,
 				3FE800C229AC7FE200598BC5 /* LaunchScreen.storyboard in Resources */,
 				3FE800BF29AC7FE200598BC5 /* Assets.xcassets in Resources */,
 				3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */,
