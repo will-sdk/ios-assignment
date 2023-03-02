@@ -2,12 +2,13 @@
 import UIKit
 import RxSwift
 import SnapKit
+import RxCocoa
 
 class CitySearchViewController: UIViewController {
     
     var viewModel: CitySearchViewModel!
     
-    let disposBag = DisposeBag()
+    let disposeBag = DisposeBag()
     let tableview = UITableView()
     let searchBar = UISearchBar()
     
@@ -41,16 +42,28 @@ class CitySearchViewController: UIViewController {
             .mapToVoid()
             .asDriverOnErrorJustComplete()
         
-        let input = CitySearchViewModel.Input(trigger: viewWillAppear, selection: tableview.rx.itemSelected.asDriver())
+            let input = CitySearchViewModel.Input(
+                trigger: Driver.merge(
+                    viewWillAppear,
+                    searchBar.rx.searchButtonClicked.asDriver()
+                ),
+                selection: tableview.rx.itemSelected.asDriver()
+            )
+        
+        searchBar.rx.text.orEmpty
+                .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+                .distinctUntilChanged()
+                .bind(to: input.searchQuery)
+                .disposed(by: disposeBag)
         
         let output = viewModel.transform(input: input)
         
         output.cities.drive(tableview.rx.items(cellIdentifier: CitySearchTableViewCell.reuseID, cellType: CitySearchTableViewCell.self)) { index, viewModel, cell in
             cell.bind(viewModel)
-        }.disposed(by: disposBag)
+        }.disposed(by: disposeBag)
         
         output.selectedCity
             .drive()
-            .disposed(by: disposBag)
+            .disposed(by: disposeBag)
     }
 }
