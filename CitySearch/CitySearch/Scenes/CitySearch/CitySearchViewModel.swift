@@ -40,7 +40,7 @@ final class CitySearchViewModel {
                 if query.isEmpty {
                     return cities
                 } else {
-                    return cities.filter { $0.cityName.localizedCaseInsensitiveContains(query) }
+                    return cities.filter { $0.fullNameOfCityAndCountry.lowercased().hasPrefix(query.lowercased()) }
                 }
         }
         
