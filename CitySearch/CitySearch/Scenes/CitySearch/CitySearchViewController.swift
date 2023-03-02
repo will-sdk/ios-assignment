@@ -38,13 +38,9 @@ class CitySearchViewController: UIViewController {
     }
     
     private func bindElements() {
-        let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
-        
             let input = CitySearchViewModel.Input(
                 trigger: Driver.merge(
-                    viewWillAppear,
+                    Driver.just(()),
                     searchBar.rx.searchButtonClicked.asDriver()
                 ),
                 selection: tableview.rx.itemSelected.asDriver()
