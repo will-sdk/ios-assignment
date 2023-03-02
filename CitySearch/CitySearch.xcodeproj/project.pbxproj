@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2D3E300A23A8CFFF3F8E417C /* Pods_NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF575FF03900C74A90DCCC62 /* Pods_NetworkPlatform.framework */; };
+		3F91F8B629B090E600DE2EE1 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F91F8B529B090E600DE2EE1 /* cities.json */; };
 		3FDE2EF629AE0A9100B2DA0B /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDE2EF529AE0A9100B2DA0B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDE2EF929AE0A9100B2DA0B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; };
 		3FDE2EFA29AE0A9100B2DA0B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3FDE2F0129AE0AF600B2DA0B /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0029AE0AF600B2DA0B /* cities.json */; };
 		3FDE2F0429AE0B9100B2DA0B /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0329AE0B9100B2DA0B /* Cities.swift */; };
 		3FDE2F0829AE0D0200B2DA0B /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0729AE0D0200B2DA0B /* UseCaseProvider.swift */; };
 		3FDE2F0A29AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE2F0929AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift */; };
@@ -96,9 +96,9 @@
 /* Begin PBXFileReference section */
 		0974848ADD39782C966603C6 /* Pods-CitySearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitySearchTests.debug.xcconfig"; path = "Target Support Files/Pods-CitySearchTests/Pods-CitySearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		223AB47FB113B1EF714149FC /* Pods_CitySearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitySearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F91F8B529B090E600DE2EE1 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		3FDE2EF329AE0A9100B2DA0B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE2EF529AE0A9100B2DA0B /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
-		3FDE2F0029AE0AF600B2DA0B /* cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		3FDE2F0329AE0B9100B2DA0B /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		3FDE2F0729AE0D0200B2DA0B /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		3FDE2F0929AE0D2B00B2DA0B /* ListOfCitiesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCase.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		3FDE2EFF29AE0AD400B2DA0B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3FDE2F0029AE0AF600B2DA0B /* cities.json */,
+				3F91F8B529B090E600DE2EE1 /* cities.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -573,6 +573,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F91F8B629B090E600DE2EE1 /* cities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +588,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDE2F0129AE0AF600B2DA0B /* cities.json in Resources */,
 				3FE800C229AC7FE200598BC5 /* LaunchScreen.storyboard in Resources */,
 				3FE800BF29AC7FE200598BC5 /* Assets.xcassets in Resources */,
 				3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */,
