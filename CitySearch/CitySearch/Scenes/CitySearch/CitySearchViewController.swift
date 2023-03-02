@@ -63,7 +63,10 @@ class CitySearchViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         output.selectedCity
-            .drive()
+            .drive(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.searchBar.resignFirstResponder()
+            })
             .disposed(by: disposeBag)
     }
 }
