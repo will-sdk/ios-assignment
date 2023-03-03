@@ -1,12 +1,14 @@
 
 import Domain
 
-final class CitySearchItemViewModel {
+struct CitySearchItemViewModel: Decodable {
     let cityName: String
     let country : String
     let lat : Double
     let long : Double
     let fullNameOfCityAndCountry : String
+    
+    var searchValue = ""
     
     let cities: Cities
     init (with cities:Cities) {
