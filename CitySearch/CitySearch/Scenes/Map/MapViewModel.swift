@@ -4,19 +4,19 @@ import RxSwift
 import RxCocoa
 
 final class MapViewModel {
-    private let cities: Cities
+    private let citySearchItem: CitySearchItemViewModel
     private let navigator: MapNavigator
     
-    init(cities: Cities, navigator: MapNavigator) {
-        self.cities = cities
+    init(citySearchItem: CitySearchItemViewModel, navigator: MapNavigator) {
+        self.citySearchItem = citySearchItem
         self.navigator = navigator
     }
     
     func transform(input: Input) -> Output {
-        let cities = input.trigger
-            .map { self.cities }
+        let citySearchItem = input.trigger
+            .map { self.citySearchItem }
         
-        return Output(cities: cities)
+        return Output(citySearchItem: citySearchItem)
     }
     
 }
@@ -27,6 +27,6 @@ extension MapViewModel {
     }
 
     struct Output {
-        let cities: Driver<Cities>
+        let citySearchItem: Driver<CitySearchItemViewModel>
     }
 }
