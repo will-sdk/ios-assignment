@@ -3,7 +3,7 @@ import UIKit
 import Domain
 
 protocol CitySearchNavigator {
-    func toMapView(_ cities: Cities)
+    func toMapView(_ citySearchItem: CitySearchItemViewModel)
 }
 
 class DefaultCitySearchNavigator: CitySearchNavigator {
@@ -23,9 +23,9 @@ class DefaultCitySearchNavigator: CitySearchNavigator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func toMapView(_ cities: Cities) {
+    func toMapView(_ citySearchItem: CitySearchItemViewModel) {
         let navigator = DefaultMapNavigator(navigationController: navigationController)
-        let viewModel = MapViewModel(cities: cities, navigator: navigator)
+        let viewModel = MapViewModel(citySearchItem: citySearchItem, navigator: navigator)
         let vc = storyBoard.instantiateViewController(ofType: MapViewController.self)
         vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: true)
