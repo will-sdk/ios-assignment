@@ -55,7 +55,7 @@ class CitySearchViewController: UIViewController {
         let output = viewModel.transform(input: input)
         
         output.cities.drive(tableview.rx.items(cellIdentifier: CitySearchTableViewCell.reuseID, cellType: CitySearchTableViewCell.self)) { index, viewModel, cell in
-            cell.bind(viewModel)
+            cell.bind(self.viewModel.itemWithOffset(offset: index))
         }.disposed(by: disposeBag)
         
         output.selectedCity

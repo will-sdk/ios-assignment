@@ -72,15 +72,15 @@ class MapViewController: UIViewController {
         let input = MapViewModel.Input(trigger: viewWillAppear)
         let output = viewModel.transform(input: input)
         
-        output.cities.drive(cityBinding)
+        output.citySearchItem.drive(cityBinding)
             .disposed(by: disposBag)
     }
     
-    var cityBinding: Binder<Cities> {
+    var cityBinding: Binder<CitySearchItemViewModel> {
         return Binder(self, binding: { (_ , city) in
-            self.setupMapViewBy(lat: city.coord.lat, long: city.coord.lon)
-            self.navigationItem.title = "\(city.name), \(city.country)"
-            self.subtitleLabel.text = "lat: \(city.coord.lat), long: \(city.coord.lon)"
+            self.setupMapViewBy(lat: city.lat, long: city.long)
+            self.navigationItem.title = city.cityAndCountry
+            self.subtitleLabel.text = city.latAndlong
         })
     }
     
