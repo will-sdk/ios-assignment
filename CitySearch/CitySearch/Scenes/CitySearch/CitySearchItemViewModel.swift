@@ -6,7 +6,8 @@ struct CitySearchItemViewModel: Decodable {
     let country : String
     let lat : Double
     let long : Double
-    let fullNameOfCityAndCountry : String
+    let cityAndCountry : String
+    let latAndlong : String
     
     var searchValue = ""
     
@@ -17,6 +18,7 @@ struct CitySearchItemViewModel: Decodable {
         self.country = cities.country
         self.lat = cities.coord.lat
         self.long = cities.coord.lon
-        self.fullNameOfCityAndCountry = "\(cities.name), \(cities.country)"
+        self.cityAndCountry = "\(cities.name), \(cities.country)"
+        self.latAndlong = "lat: \(cities.coord.lat), long: \(cities.coord.lon)"
     }
 }
