@@ -50,7 +50,7 @@ final class CitySearchViewModel {
         
         let selectedCity = input.selection
             .withLatestFrom(filteredCities) { (index, cities) -> CitySearchItemViewModel in
-                return self.itemWithOffset(offset: index.row)
+                return cities[index.row]
             }
             .do(onNext: navigator.toMapView)
                 
@@ -66,7 +66,7 @@ final class CitySearchViewModel {
         resultsIndex = (first: 0, last: items.count - 1)
     }
     
-    private func parseSearchValues() {
+    func parseSearchValues() {
         for index in 0..<items.count {
             items[index].searchValue = items[index].cityAndCountry.lowercased()
         }
@@ -77,11 +77,6 @@ final class CitySearchViewModel {
             $0.searchValue < $1.searchValue
         }
         itemsReversed = items.reversed()
-    }
-    
-    // Find item with Offset
-    func itemWithOffset(offset: Int) -> CitySearchItemViewModel {
-        return items[resultsIndex.first + offset]
     }
     
     // Filter Search Data return Array CitySearchItemViewModel
@@ -98,55 +93,65 @@ final class CitySearchViewModel {
     
     private func findRange(search: String) -> [CitySearchItemViewModel] {
         let startDate = Date()
-        let indexFirst = findFirstIndex(search: search)
-        let indexLast = findLastIndex(search: search)
+        let startIndex = findFirstIndex(search: search)
+        guard startIndex < items.count else {
+            // No matches found
+            resultsIndex = (first: 0, last: 0)
+            return []
+        }
         
-        resultsIndex = (first: indexFirst, last: indexLast)
+        let endIndex = findLastIndex(search: search)
+        let range = startIndex...endIndex
+        resultsIndex = (first: startIndex, last: endIndex)
         debugPrint("Query Text: \(search) - time: \(Date().timeIntervalSince(startDate))")
-        return items
+        return Array(items[range])
     }
-    
+
     private func findFirstIndex(search: String) -> Int {
-        var start = 0
-        var end = items.count - 1
-        let search = search.lowercased()
+        var low = 0
+        var high = items.count - 1
         
-        while start < end {
-            let mid = (start + end) / 2
+        while low <= high {
+            let mid = (low + high) / 2
+            let item = items[mid]
             
-            if items[mid].searchValue < search {
-                start = mid + 1
+            if item.cityAndCountry.lowercased().hasPrefix(search.lowercased()) {
+                if mid == 0 || !items[mid-1].cityAndCountry.lowercased().hasPrefix(search.lowercased()) {
+                    return mid
+                } else {
+                    high = mid - 1
+                }
+            } else if item.cityAndCountry.lowercased() < search.lowercased() {
+                low = mid + 1
             } else {
-                end = mid
+                high = mid - 1
             }
         }
         
-        if items[start].searchValue.hasPrefix(search) {
-            return start
-        } else {
-            return end + 1
-        }
+        return items.count
     }
-    
+
     private func findLastIndex(search: String) -> Int {
-        var start = 0
-        var end = itemsReversed.count - 1
-        let search = search.lowercased()
+        var low = 0
+        var high = items.count - 1
         
-        while start < end {
-            let mid = (start + end) / 2
+        while low <= high {
+            let mid = (low + high) / 2
+            let item = items[mid]
             
-            if itemsReversed[mid].searchValue > search {
-                start = mid + 1
+            if item.cityAndCountry.lowercased().hasPrefix(search.lowercased()) {
+                if mid == items.count - 1 || !items[mid+1].cityAndCountry.lowercased().hasPrefix(search.lowercased()) {
+                    return mid
+                } else {
+                    low = mid + 1
+                }
+            } else if item.cityAndCountry.lowercased() < search.lowercased() {
+                low = mid + 1
             } else {
-                end = mid
+                high = mid - 1
             }
         }
         
-        if itemsReversed[start].searchValue.hasPrefix(search) {
-            return items.count - 1 - start
-        } else {
-            return items.count - 1 - end - 1
-        }
+        return items.count
     }
 }
