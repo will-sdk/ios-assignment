@@ -1,8 +1,10 @@
-//
-//  ListOfCitiesUseCaseMock.swift
-//  CitySearchTests
-//
-//  Created by Willy on 04/03/2023.
-//
+@testable import CitySearch
+import RxSwift
+import Domain
 
-import Foundation
+class ListOfCitiesUseCaseMock: ListOfCitiesUseCase {
+    var listOfCitiesResult: Observable<[Cities]> = Observable.just([])
+    func listOfCities() -> Observable<[Cities]> {
+        return listOfCitiesResult
+    }
+}
