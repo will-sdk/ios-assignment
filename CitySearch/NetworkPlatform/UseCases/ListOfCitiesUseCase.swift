@@ -10,7 +10,7 @@ final class ListOfCitiesUseCase: Domain.ListOfCitiesUseCase {
         self.network = network
     }
     
-    func listOfCities() -> RxSwift.Observable<[Domain.Cities]> {
+    func listOfCities() -> Observable<[Cities]> {
         let listOfCities = network.fetchListOfCities()
         return listOfCities
     }
