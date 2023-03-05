@@ -1,8 +1,13 @@
-//
-//  MockCitySearchNavigator.swift
-//  CitySearchTests
-//
-//  Created by Willy on 05/03/2023.
-//
 
 import Foundation
+
+class CitySearchNavigatorMock: CitySearchNavigator {
+    
+    var toMapViewCalled = false
+    var selectedCity: CitySearchItemViewModel?
+    
+    func toMapView(_ citySearchItem: CitySearchItemViewModel)  {
+        toMapViewCalled = true
+        selectedCity = citySearchItem
+    }
+}
