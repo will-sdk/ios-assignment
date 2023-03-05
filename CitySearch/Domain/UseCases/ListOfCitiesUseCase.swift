@@ -2,5 +2,5 @@
 import RxSwift
 
 public protocol ListOfCitiesUseCase {
-    func listOfCities()  -> Observable<[Cities]>
+    func listOfCities() -> Observable<[Cities]>
 }
