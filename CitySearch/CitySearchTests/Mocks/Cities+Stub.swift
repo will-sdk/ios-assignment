@@ -1,8 +1,9 @@
+import Domain
 
 extension Cities {
     
-    static func stub(country: String = "UA",
-                     name: String = "Hurzuf",
+    static func stub(country: String = "US",
+                     name: String = "Alabama",
                      coord: Location = Location.stub()) -> Self {
         Cities(country: country,
                name: name,
