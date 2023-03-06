@@ -259,5 +259,81 @@ class CitySearchViewModelTests: XCTestCase {
         XCTAssertEqual(result?.count, 1)
         XCTAssertEqual(result?.map { $0.cityAndCountry }, expectedOutput.map { $0.cityAndCountry })
     }
+    
+    func test_transform_with_empty_cities() {
+        // Given
+        usecase.listOfCitiesResult = .just([])
+        let scheduler = TestScheduler(initialClock: 0)
+        let input = CitySearchViewModel.Input(trigger: Driver.just(()), selection: Driver.just(IndexPath(row: 0, section: 0)))
+        
+        // When
+        let output = sut.transform(input: input)
+
+        // Then
+        var result: [CitySearchItemViewModel]?
+        output.cities
+            .drive(onNext: {
+                result = $0
+            })
+            .disposed(by: disposeBag)
+        scheduler.start()
+        
+        XCTAssertEqual(result?.count, 0)
+    }
+    
+    func test_transform_with_empty_data_when_search_not_match() {
+        // Given
+        let cities = [
+            Cities(country: "AU", name: "Sydney", coord: Location.stub())
+        ]
+        usecase.listOfCitiesResult = .just(cities)
+        sut.items = cities.map { CitySearchItemViewModel(with: $0) }
+        let expectedOutput = [CitySearchItemViewModel(with: cities[0])]
+        let scheduler = TestScheduler(initialClock: 0)
+        let input = CitySearchViewModel.Input(trigger: Driver.just(()), selection: Driver.just(IndexPath(row: 0, section: 0)))
+        input.searchQuery.accept("Alccc")
+        
+        // When
+        let output = sut.transform(input: input)
+        var result: [CitySearchItemViewModel]?
+        output.cities
+            .drive(onNext: {
+                result = $0
+                
+            })
+            .disposed(by: disposeBag)
+        scheduler.start()
+
+        // Then
+        XCTAssertEqual(result?.count, 0)
+        XCTAssertTrue(result?.isEmpty ?? false)
+        XCTAssertNotEqual(result?.map { $0.cityAndCountry }, expectedOutput.map { $0.cityAndCountry })
+    }
+    
+    func test_transform_with_empty_data_when_city_is_nil() {
+        // Given
+        let cities: [Cities?] = [nil]
+        usecase.listOfCitiesResult = .just(cities.compactMap { $0 })
+        sut.items = cities.compactMap { $0 }.map { CitySearchItemViewModel(with: $0) }
+     
+        let scheduler = TestScheduler(initialClock: 0)
+        let input = CitySearchViewModel.Input(trigger: Driver.just(()), selection: Driver.just(IndexPath(row: 0, section: 0)))
+        
+        // When
+        let output = sut.transform(input: input)
+        var result: [CitySearchItemViewModel]?
+        output.cities
+            .drive(onNext: {
+                result = $0
+                
+            })
+            .disposed(by: disposeBag)
+        scheduler.start()
+
+        // Then
+        XCTAssertEqual(result?.count, 0)
+    }
+
+
 
 }
