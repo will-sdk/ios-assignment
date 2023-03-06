@@ -9,6 +9,10 @@ def rx_cocoa
   pod 'RxCocoa', '~> 6.5.0'
 end
 
+def rx_test
+  pod 'RxTest'
+end
+
 def snap_kit
   pod 'SnapKit'
 end
@@ -16,6 +20,7 @@ end
 def test_pods
   rx_cocoa
   rx_swift
+  rx_test
 end
 
 target 'CitySearch' do
