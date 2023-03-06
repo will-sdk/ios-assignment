@@ -25,6 +25,8 @@
 		3F59951229B391DB00691AF9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800E729ACAA6B00598BC5 /* Application.swift */; };
 		3F91F8B729B0914800DE2EE1 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F91F8B529B090E600DE2EE1 /* cities.json */; };
 		3FC6030729B4B5CE00B12E08 /* CitySearchNavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6030629B4B5CE00B12E08 /* CitySearchNavigatorMock.swift */; };
+		3FC6030929B4CB6B00B12E08 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6030829B4CB6B00B12E08 /* MapViewModelTests.swift */; };
+		3FC6030B29B4CBA700B12E08 /* MapNavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6030A29B4CBA700B12E08 /* MapNavigatorMock.swift */; };
 		3FDE2EF629AE0A9100B2DA0B /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDE2EF529AE0A9100B2DA0B /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDE2EF929AE0A9100B2DA0B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; };
 		3FDE2EFA29AE0A9100B2DA0B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE2EF329AE0A9100B2DA0B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,8 +53,6 @@
 		3FE800BD29AC7FE100598BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BB29AC7FE100598BC5 /* Main.storyboard */; };
 		3FE800BF29AC7FE200598BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800BE29AC7FE200598BC5 /* Assets.xcassets */; };
 		3FE800C229AC7FE200598BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE800C029AC7FE200598BC5 /* LaunchScreen.storyboard */; };
-		3FE800D729AC7FE300598BC5 /* CitySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800D629AC7FE300598BC5 /* CitySearchUITests.swift */; };
-		3FE800D929AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800D829AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift */; };
 		3FE800E829ACAA6B00598BC5 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800E729ACAA6B00598BC5 /* Application.swift */; };
 		3FE800EC29ACAB7A00598BC5 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */; };
 		3FE800EE29ACABF500598BC5 /* DefaultCitySearchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */; };
@@ -91,13 +91,6 @@
 			remoteGlobalIDString = 3FE800B129AC7FE100598BC5;
 			remoteInfo = CitySearch;
 		};
-		3FE800D329AC7FE300598BC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3FE800AA29AC7FE100598BC5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3FE800B129AC7FE100598BC5;
-			remoteInfo = CitySearch;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +116,8 @@
 		3F59950329B3807900691AF9 /* ListOfCitiesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCitiesUseCaseMock.swift; sourceTree = "<group>"; };
 		3F91F8B529B090E600DE2EE1 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		3FC6030629B4B5CE00B12E08 /* CitySearchNavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchNavigatorMock.swift; sourceTree = "<group>"; };
+		3FC6030829B4CB6B00B12E08 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		3FC6030A29B4CBA700B12E08 /* MapNavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigatorMock.swift; sourceTree = "<group>"; };
 		3FDE2EF329AE0A9100B2DA0B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDE2EF529AE0A9100B2DA0B /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		3FDE2F0329AE0B9100B2DA0B /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
@@ -150,9 +145,6 @@
 		3FE800C129AC7FE200598BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FE800C329AC7FE200598BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE800C829AC7FE300598BC5 /* CitySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE800D229AC7FE300598BC5 /* CitySearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitySearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE800D629AC7FE300598BC5 /* CitySearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchUITests.swift; sourceTree = "<group>"; };
-		3FE800D829AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FE800E729ACAA6B00598BC5 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		3FE800EB29ACAB7A00598BC5 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		3FE800ED29ACABF500598BC5 /* DefaultCitySearchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCitySearchNavigator.swift; sourceTree = "<group>"; };
@@ -205,13 +197,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FE800CF29AC7FE300598BC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -221,6 +206,7 @@
 				3F5994FB29B3650800691AF9 /* Cities+Stub.swift */,
 				3F59950329B3807900691AF9 /* ListOfCitiesUseCaseMock.swift */,
 				3FC6030629B4B5CE00B12E08 /* CitySearchNavigatorMock.swift */,
+				3FC6030A29B4CBA700B12E08 /* MapNavigatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -313,7 +299,6 @@
 			children = (
 				3FE800B429AC7FE100598BC5 /* CitySearch */,
 				3FE800CB29AC7FE300598BC5 /* CitySearchTests */,
-				3FE800D529AC7FE300598BC5 /* CitySearchUITests */,
 				3FDE2EF429AE0A9100B2DA0B /* Domain */,
 				3FDE2F1129AE109800B2DA0B /* NetworkPlatform */,
 				3FE800B329AC7FE100598BC5 /* Products */,
@@ -327,7 +312,6 @@
 			children = (
 				3FE800B229AC7FE100598BC5 /* CitySearch.app */,
 				3FE800C829AC7FE300598BC5 /* CitySearchTests.xctest */,
-				3FE800D229AC7FE300598BC5 /* CitySearchUITests.xctest */,
 				3FDE2EF329AE0A9100B2DA0B /* Domain.framework */,
 				3FDE2F1029AE109800B2DA0B /* NetworkPlatform.framework */,
 			);
@@ -354,17 +338,9 @@
 			children = (
 				3F5994FA29B364DD00691AF9 /* Mocks */,
 				3F5994F629B3625300691AF9 /* CitySearchViewModelTests.swift */,
+				3FC6030829B4CB6B00B12E08 /* MapViewModelTests.swift */,
 			);
 			path = CitySearchTests;
-			sourceTree = "<group>";
-		};
-		3FE800D529AC7FE300598BC5 /* CitySearchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3FE800D629AC7FE300598BC5 /* CitySearchUITests.swift */,
-				3FE800D829AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift */,
-			);
-			path = CitySearchUITests;
 			sourceTree = "<group>";
 		};
 		3FE800E529ACAA3000598BC5 /* Utility */ = {
@@ -535,24 +511,6 @@
 			productReference = 3FE800C829AC7FE300598BC5 /* CitySearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3FE800D129AC7FE300598BC5 /* CitySearchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3FE800E229AC7FE300598BC5 /* Build configuration list for PBXNativeTarget "CitySearchUITests" */;
-			buildPhases = (
-				3FE800CE29AC7FE300598BC5 /* Sources */,
-				3FE800CF29AC7FE300598BC5 /* Frameworks */,
-				3FE800D029AC7FE300598BC5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3FE800D429AC7FE300598BC5 /* PBXTargetDependency */,
-			);
-			name = CitySearchUITests;
-			productName = CitySearchUITests;
-			productReference = 3FE800D229AC7FE300598BC5 /* CitySearchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,10 +536,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 3FE800B129AC7FE100598BC5;
 					};
-					3FE800D129AC7FE300598BC5 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 3FE800B129AC7FE100598BC5;
-					};
 				};
 			};
 			buildConfigurationList = 3FE800AD29AC7FE100598BC5 /* Build configuration list for PBXProject "CitySearch" */;
@@ -599,7 +553,6 @@
 			targets = (
 				3FE800B129AC7FE100598BC5 /* CitySearch */,
 				3FE800C729AC7FE300598BC5 /* CitySearchTests */,
-				3FE800D129AC7FE300598BC5 /* CitySearchUITests */,
 				3FDE2EF229AE0A9100B2DA0B /* Domain */,
 				3FDE2F0F29AE109700B2DA0B /* NetworkPlatform */,
 			);
@@ -633,13 +586,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3FE800C629AC7FE300598BC5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FE800D029AC7FE300598BC5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -832,18 +778,11 @@
 				3F59950C29B3915100691AF9 /* Observable+Ext.swift in Sources */,
 				3F59950E29B3916800691AF9 /* MapViewModel.swift in Sources */,
 				3F5994FF29B3691B00691AF9 /* CitySearchViewModel.swift in Sources */,
+				3FC6030B29B4CBA700B12E08 /* MapNavigatorMock.swift in Sources */,
 				3F59950429B3807900691AF9 /* ListOfCitiesUseCaseMock.swift in Sources */,
 				3F59950A29B38FF800691AF9 /* DefaultCitySearchNavigator.swift in Sources */,
 				3F59950B29B3900800691AF9 /* CitySearchViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FE800CE29AC7FE300598BC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FE800D729AC7FE300598BC5 /* CitySearchUITests.swift in Sources */,
-				3FE800D929AC7FE300598BC5 /* CitySearchUITestsLaunchTests.swift in Sources */,
+				3FC6030929B4CB6B00B12E08 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,11 +808,6 @@
 			isa = PBXTargetDependency;
 			target = 3FE800B129AC7FE100598BC5 /* CitySearch */;
 			targetProxy = 3FE800C929AC7FE300598BC5 /* PBXContainerItemProxy */;
-		};
-		3FE800D429AC7FE300598BC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3FE800B129AC7FE100598BC5 /* CitySearch */;
-			targetProxy = 3FE800D329AC7FE300598BC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1239,40 +1173,6 @@
 			};
 			name = Release;
 		};
-		3FE800E329AC7FE300598BC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbkk.CitySearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CitySearch;
-			};
-			name = Debug;
-		};
-		3FE800E429AC7FE300598BC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.willbkk.CitySearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CitySearch;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1317,15 +1217,6 @@
 			buildConfigurations = (
 				3FE800E029AC7FE300598BC5 /* Debug */,
 				3FE800E129AC7FE300598BC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3FE800E229AC7FE300598BC5 /* Build configuration list for PBXNativeTarget "CitySearchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3FE800E329AC7FE300598BC5 /* Debug */,
-				3FE800E429AC7FE300598BC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
