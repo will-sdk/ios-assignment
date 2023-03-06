@@ -2,7 +2,7 @@
 import UIKit
 
 protocol MapNavigator {
-    func toPosts()
+    func toCitySearch()
 }
 
 final class DefaultMapNavigator: MapNavigator {
@@ -12,7 +12,7 @@ final class DefaultMapNavigator: MapNavigator {
         self.navigationController = navigationController
     }
 
-    func toPosts() {
+    func toCitySearch() {
         navigationController.popViewController(animated: true)
     }
 }

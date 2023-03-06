@@ -4,17 +4,19 @@ import RxSwift
 import RxCocoa
 
 final class MapViewModel {
-    private let citySearchItem: CitySearchItemViewModel
+    private let citySearchItem: CitySearchItemViewModel?
     private let navigator: MapNavigator
     
-    init(citySearchItem: CitySearchItemViewModel, navigator: MapNavigator) {
+    init(citySearchItem: CitySearchItemViewModel?, navigator: MapNavigator) {
         self.citySearchItem = citySearchItem
         self.navigator = navigator
     }
     
     func transform(input: Input) -> Output {
         let citySearchItem = input.trigger
-            .map { self.citySearchItem }
+            .map { [weak self] in
+                self?.citySearchItem ?? CitySearchItemViewModel(with: nil) }
+            .asDriver(onErrorJustReturn: CitySearchItemViewModel(with: nil))
         
         return Output(citySearchItem: citySearchItem)
     }
