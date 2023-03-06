@@ -333,7 +333,4 @@ class CitySearchViewModelTests: XCTestCase {
         // Then
         XCTAssertEqual(result?.count, 0)
     }
-
-
-
 }
