@@ -47,3 +47,14 @@ The app includes unit tests to ensure its functionality. The tests cover the use
 # Conclusion
 Using Clean Architecture, MVVM, and RxSwift with SnapKit for the UI and binary search for the search logic can result in a highly scalable, maintainable, and testable software architecture. By separating the concerns of the user interface and using reactive programming and efficient search algorithms, create high-quality, and maintainable applications that are easier to maintain and extend over time.
 
+| iphone portrait | ipad portrait |
+| -------- | -------- |
+|![iphone-vertical](https://user-images.githubusercontent.com/75713253/223383210-ca98e508-60e0-439d-bc6d-1955e7bbd612.gif) | ![ipad-vertical](https://user-images.githubusercontent.com/75713253/223383249-f9abd0fd-dac7-4b57-9a0a-0c0c72a14090.gif) |
+
+| iphone landscape | ipad landscape |
+| -------- | -------- |
+|![iphone-landscape](https://user-images.githubusercontent.com/75713253/223383449-5fd99949-95ab-4cd7-8049-278a06a3a396.gif) | ![ipad-landscape](https://user-images.githubusercontent.com/75713253/223383502-ad8ee4c1-8910-4174-9c98-1b057f941a3e.gif) |
+
+
+
+
