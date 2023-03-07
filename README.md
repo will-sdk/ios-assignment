@@ -1,77 +1,60 @@
-# iOS Mobile assignment
+## iOS Mobile assignment
+# City Search App
 
-The goal of this assignment is to evaluate the problem solving skills, UX judgement and code quality of the candidate.
+ City Search App is a sample application that demonstrates the use of Clean Architecture, MVVM, and RxSwift in an iOS app. The UI is built using SnapKit, and the search logic uses binary search. The app also includes unit tests to ensure its functionality.
 
-We have a list of cities containing around 200k entries in JSON format. Each entry contains the following information:
+# Overview
 
-```
-{
-    "country":"UA",
-    "name":"Hurzuf",
-    "_id":707860,
-    "coord":{
-            "lon":34.283333,
-        "lat":44.549999
-    }
-}
-```
+The app displays a list of items and allows the user to search for items using a binary search algorithm. The app is built using the following technologies:
 
-Your task is to:
-* Load the list of cities from [here](https://raw.githubusercontent.com/SiriusiOS/ios-assignment/main/cities.json).
-* Be able to filter the results by a given prefix string, following these requirements:
-     * Follow the prefix definition specified in the clarifications section below.
-     * Implement a search algorithm optimised for fast runtime searches. Initial loading time of the app does not matter.
-     * Search is case insensitive.
-     * **Time efficiency for filter algorithm should be better than linear**
-* Display these cities in a scrollable list, in alphabetical order (city first, country after). Hence, "Denver, US" should appear before "Sydney, Australia".
-     * The UI should be as responsive as possible while typing in a filter.
-     * The list should be updated with every character added/removed to/from the filter.
-* Each city's cell should:
-     * Show the city and country code as title.
-     * Show the coordinates as subtitle.
-     * When tapped, show the location of that city on a map.
-* Provide unit tests showing that your search algorithm is displaying the correct results giving different inputs, including invalid inputs.
+* Swift 5
+* Clean Architecture
+* MVVM
+* RxSwift
+* SnapKit
 
-## Additional requirements/restrictions:
+# Architecture
 
-* The list will be provided to you as a plain text JSON format array.
-* You can preprocess the list into any other representation that you consider more efficient
-for searches and display. Provide information of why that representation is more efficient
-in the comments of the code.
-* Database implementations are forbidden
-* Provide unit tests, that your search algorithm is displaying the correct results giving
-different inputs, including invalid inputs.
-* Alpha/beta versions of the IDE are forbidden, you must work with the stable version of
-the IDE
-* The code of the assignment has to be delivered along with the git repository (.git folder).
-We want to see the progress evolution
-* Screen rotation should be allowed 
-* Language must be Swift
-* Compatible with the 2 latest major versions of iOS
-* Architecture must be MVVM + RxSwift 
-* 3rd party libraries are forbidden. (except RxSwift and SnapKit)
+![1_N3ypUNMUGv87qUL57JyqJA](https://user-images.githubusercontent.com/75713253/223375791-307ef1c4-42fd-45ae-9f86-80a0b0117e92.png)
 
-## Assessment:
-Once submitted, your solution will be checked on the requirements/restrictions mentioned above as well as:
-- Technical Skills
-- Documentation
-- Coding/Problem solving skills
-- Code Efficiency, Maintainability, Scalability
-- Design Patterns
-- Version Control
-- Testing
-- Platform Knowledge
+The app uses Clean Architecture to ensure that the system is modular, testable, and scalable. The architecture is divided into the following layers:
 
-## Clarifications
+* Presentation Layer: Contains the user interface and the view models that bind the user interface to the use cases.
+* Domain Layer: Contains the use cases and the entities that represent the business logic of the application.
+* Data Layer: Contains the repositories that provide access to the data sources.
 
-We define a prefix string as: a substring that matches the initial characters of the target string. For instance, assume the following entries:
+# Design Patterns
+The app uses MVVM to separate the concerns of the user interface and make it easier to maintain and modify. The MVVM pattern separates the following concerns:
 
-* Alabama, US
-* Albuquerque, US
-* Anaheim, US
-* Arizona, US
-* Sydney, AU
+* Model: The data and the business logic of the application.
+* View: The user interface.
+* ViewModel: The mediator between the model and the view.
 
-If the given prefix is "A", all cities but Sydney should appear. Contrariwise, if the given prefix is "s", the only result should be "Sydney, AU".
-If the given prefix is "Al", "Alabama, US" and "Albuquerque, US" are the only results.
-If the prefix given is "Alb" then the only result is "Albuquerque, US"
+The app also uses RxSwift to handle asynchronous events in the system. RxSwift provides a reactive programming paradigm that allows app to work with asynchronous data streams in a more concise and declarative manner.
+
+The UI is built using SnapKit, which is a DSL for Autolayout in Swift.
+
+# Search Logic
+The app originally used the default filter method to search for items in the list. However, which can result in slow performance for large lists. To improve the performance of the search feature, So I switched to using a binary search algorithm, in this case, faster than before (around 0.0001-0.0003 seconds per search).
+
+| typing search | debounce search |
+| -------- | ----- |
+|![3search](https://user-images.githubusercontent.com/75713253/223376377-1735551e-b368-4df2-90f3-0251e27fa29d.gif) | ![debouce search](https://user-images.githubusercontent.com/75713253/223376450-68bec7a4-0ab7-4132-94a6-2cb2debbf172.gif) |
+
+# Unit Tests
+The app includes unit tests to ensure its functionality. The tests cover the use cases, and viewmodel in the app. This ensures that the app is working as expected and makes it easier to catch bugs and issues.
+
+# Conclusion
+Using Clean Architecture, MVVM, and RxSwift with SnapKit for the UI and binary search for the search logic can result in a highly scalable, maintainable, and testable software architecture. By separating the concerns of the user interface and using reactive programming and efficient search algorithms, create high-quality, and maintainable applications that are easier to maintain and extend over time.
+
+| iphone portrait | ipad portrait |
+| -------- | -------- |
+|![iphone-vertical](https://user-images.githubusercontent.com/75713253/223383210-ca98e508-60e0-439d-bc6d-1955e7bbd612.gif) | ![ipad-vertical](https://user-images.githubusercontent.com/75713253/223383249-f9abd0fd-dac7-4b57-9a0a-0c0c72a14090.gif) |
+
+| iphone landscape | ipad landscape |
+| -------- | -------- |
+|![iphone-landscape](https://user-images.githubusercontent.com/75713253/223383449-5fd99949-95ab-4cd7-8049-278a06a3a396.gif) | ![ipad-landscape](https://user-images.githubusercontent.com/75713253/223383502-ad8ee4c1-8910-4174-9c98-1b057f941a3e.gif) |
+
+
+
+
