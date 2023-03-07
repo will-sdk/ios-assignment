@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  CitySearch
-//
-//  Created by Willy on 27/02/2023.
-//
 
 import UIKit
 
