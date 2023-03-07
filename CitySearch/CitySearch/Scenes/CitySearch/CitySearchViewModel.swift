@@ -66,7 +66,7 @@ final class CitySearchViewModel {
         resultsIndex = (first: 0, last: items.count - 1)
     }
     
-    func parseSearchValues() {
+    private func parseSearchValues() {
         for index in 0..<items.count {
             items[index].searchValue = items[index].cityAndCountry.lowercased()
         }
@@ -92,7 +92,6 @@ final class CitySearchViewModel {
     }
     
     private func findRange(search: String) -> [CitySearchItemViewModel] {
-        let startDate = Date()
         let startIndex = findFirstIndex(search: search)
         guard startIndex < items.count else {
             // No matches found
@@ -103,7 +102,6 @@ final class CitySearchViewModel {
         let endIndex = findLastIndex(search: search)
         let range = startIndex...endIndex
         resultsIndex = (first: startIndex, last: endIndex)
-        debugPrint("Query Text: \(search) - time: \(Date().timeIntervalSince(startDate))")
         return Array(items[range])
     }
 
